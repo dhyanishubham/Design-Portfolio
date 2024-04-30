@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Showcase</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9709ad;
+    background: url(./hero-bg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    /* background-color: #f0f0f0; */
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 20px;
+    background-color: #000;
+    overflow: hidden;
+  }
+  .video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Video Showcase</h2>
+  <div class="video-wrapper">
+    <video controls>
+      <source src="./video/5.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-wrapper">
+    <video controls>
+      <source src="./video/4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-wrapper">
+    <video controls>
+      <source src="./video/00.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-wrapper">
+    <video controls>
+      <source src="./video/6.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-wrapper">
+    <video controls>
+      <source src="./video/3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-wrapper">
+    <video controls>
+      <source src="./video/1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="video-wrapper">
+    <video controls>
+      <source src="./video/2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<script>
+  // Play/Pause videos on click
+  document.querySelectorAll('.video-wrapper').forEach(function(videoWrapper) {
+    videoWrapper.addEventListener('click', function() {
+      var video = this.querySelector('video');
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
